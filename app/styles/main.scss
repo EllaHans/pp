@@ -7,6 +7,11 @@ body {
   padding-top: 70px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 #header .logo-wrapper {
     position: absolute;
     left: 0;
@@ -15,22 +20,26 @@ body {
     text-align: center;
 }
 
-#header .logo-wrapper a.logo {
-  display: block;
-  background-image: url(../images/Signature_black_100jpg);
-  background-size: 100px 44px;
-  width: 100px;
-  height: 44px;
-  position: relative;
-}
+// #header .logo-wrapper a.logo {
+//   display: block;
+//   background-image: url(../images/Signature_black_100jpg);
+//   background-size: 100px 44px;
+//   width: 100px;
+//   height: 44px;
+//   position: relative;
+// }
 
 .navbar-brand {
   display: block;
-  background-image: url(./../images/Signature_black_65.jpg);
+  background: transparent url(./../images/Signature_black_65.jpg) no-repeat center;
   width: 100px;
   height: 65px;
   margin: 0 auto;
   position: relative;
+}
+
+.hovering .navbar-brand {
+  background-size: 80%;
 }
 
 .navbar .nav li a{
