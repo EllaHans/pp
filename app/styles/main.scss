@@ -1,0 +1,64 @@
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+
+#header .logo-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#header .logo-wrapper a.logo {
+  display: block;
+  background-image: url(../images/Signature_black_100jpg);
+  background-size: 100px 44px;
+  width: 100px;
+  height: 44px;
+  position: relative;
+}
+
+.navbar-brand {
+  display: block;
+  background-image: url(./../images/Signature_black_65.jpg);
+  width: 100px;
+  height: 65px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.navbar .nav li a{
+  display: inline-block;
+  font-family:'Poiret One';
+  font-size: 25px;
+  margin: 10px 30px;
+  color: #000;
+}
+
+.nav .navbar .navbar-right{
+  font-size: 15px;
+  top:5px;
+}
+
+div .homepage{
+  margin-top: 50px;
+  position:relative;
+}
+
+div .left {
+  display: block;
+  margin-top: 50px;
+}
+
+div .right {
+  display: block;
+  text-align: right;
+  margin-top: 50px;
+
+}
