@@ -8,9 +8,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
-    <title>Fixed Top Navbar Example for Bootstrap</title>
+    <title>Ella H Photography</title>
 
     <!-- Place favicon.ico in the root directory -->
 
@@ -21,14 +21,14 @@
 
 
 
-    <!-- Bootstrap core CSS -->
-    <!-- <link href="../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<!--Bootstrap core CSS-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
     <!-- Custom styles for this template -->
-    <!-- <link href="navbar-fixed-top.css" rel="stylesheet"> -->
+<link href="navbar-fixed-top.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -55,45 +55,73 @@
     <![endif]-->
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="logo-wrapper">
-            <a href="/" class="navbar-brand" title="Ella H Photography"></a>
+      <div class="container-fluid">
+        <div class="navbar-header col-sm-8">
+          <div class="row">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="logo-wrapper col-sm-offset-6 col-sm-6">
+              <a href="/" class="navbar-brand" title="Ella H Photography"></a>
+            </div>
           </div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav nav-main">
             <li><a href="#">Portfolio</a></li>
             <li><a href="#about">Travel</a></li>
             <li><a href="#contact">Blog</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="user-menu nav navbar-nav navbar-right col-sm-4">
             <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Press</a></li>
           </ul>
+
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
     <div class="homepage">
-      <div class="left">
-        <a href="#"><img src="images/Editorials.png" alt="Editorial Photography" height="350px">
-        </a>
+      <div class="block">
+      <div class="image-left overlay-fade-in image-wrapper image-overlay-content">
+        <img src="images/Editorials.png" alt="Editorial Photography" height="350px">
       </div>
-      <div class="right">
-        <a href="#"><img src="images/Portraits.png" alt="Portrait Photography" height="350px">
-        </a>
+      <div class="CTA-box box-left one">
+        <h1>Editorials &amp; Studio</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
       </div>
     </div>
+    <div class="block">
+      <div class="image-right">
+        <a href="#"><img src="images/Portraits.png" alt="Portrait Photography" height="350px"></a>
+      </div>
+      <div class="CTA-box box-right borderless">
+        <div class="top-line"><div class="line-fill"></div></div>
+        <div class="right-line"><div class="line-fill"></div></div>
+        <div class="bottom-line"><div class="line-fill"></div></div>
+        <div class="left-line"><div class="line-fill"></div></div>
+        <h1>Portraits</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+      </div>
+    </div>
+    <div class="block">
+      <div class="image-left overlay-fade-in image-wrapper image-overlay-content">
+        <img src="images/StyleBloggers.png" alt="Street Style Blogger" height="350px">
+      </div>
+      <div class="CTA-box box-left three">
+        <h1>Street Style &amp; Fashion Bloggers</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+      </div>
+    </div>
+    </div>
+
     </div> <!-- /container -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -126,7 +154,8 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="parallax.js-1.4.2/parallax.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

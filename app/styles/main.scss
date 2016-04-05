@@ -1,25 +1,20 @@
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
-
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"; // endbower
 body {
   min-height: 2000px;
   padding-top: 70px;
 }
-
 img {
   max-width: 100%;
   height: auto;
 }
-
-#header .logo-wrapper {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    text-align: center;
+.logo-wrapper {
+  text-align: center;
 }
-
+.navbar-default {
+  background: rgba(255,255,255,0.9);
+  border-color: #000;
+}
 // #header .logo-wrapper a.logo {
 //   display: block;
 //   background-image: url(../images/Signature_black_100jpg);
@@ -29,45 +24,198 @@ img {
 //   position: relative;
 // }
 
-.navbar-brand {
-  display: block;
-  background: transparent url(./../images/Signature_black_65.jpg) no-repeat center;
-  width: 100px;
-  height: 65px;
-  margin: 0 auto;
-  position: relative;
+@media (min-width: 768px){
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+      margin: 10px auto;
+  }
 }
 
+
+.navbar-brand {
+  display: block;
+  background: transparent url("./../images/Signature_black.jpg") no-repeat center;
+  background-size: 129px 87px;
+  // width: 122px;
+  // height: 73px;
+  width: 33%;
+  height: 73px;
+  margin-top: 10px;
+  float: none;
+}
 .hovering .navbar-brand {
   background-size: 80%;
 }
-
-.navbar .nav li a{
+.navbar .nav li a {
   display: inline-block;
-  font-family:'Poiret One';
+  font-family: 'Poiret One';
   font-size: 25px;
-  margin: 10px 30px;
+  margin: 0 30px;
   color: #000;
+  font-weight: bold;
 }
-
-.nav .navbar .navbar-right{
+.navbar .navbar-right li a {
   font-size: 15px;
-  top:5px;
+  margin: 1px;
+  font-weight: bold;
 }
-
-div .homepage{
-  margin-top: 50px;
-  position:relative;
+.navbar .nav-main {
+  margin-left: 290px;
 }
-
-div .left {
+div .homepage {
+  margin-top: 77px;
+  position: relative;
+}
+div .image-left {
   display: block;
-  margin-top: 50px;
+  margin-top: 77px;
 }
-
-div .right {
+div .image-right {
   display: block;
   text-align: right;
-  margin-top: 50px;
+  margin-top: 77px;
+}
+.homepage .CTA-box {
+  position: absolute;
+  border: 3px solid #000;
+  display: inline-block;
+  width: 391px;
+  padding: 30px 50px;
+}
+.CTA-box.box-left.one {
+  top: 112px;
+  left: 442px;
+}
+.CTA-box.box-left.three {
+  top: 882px;
+  left: 491px;
+}
+.CTA-box h1 {
+  font-family: 'Poiret One';
+  font-size: 25px;
+  font-weight: bold;
+}
+.CTA-box p {
+  font-family: 'Poiret One';
+  font-size: 15px;
+}
+.CTA-box {
+  background: transparent;
+  color: #000;
+  transition: all 0.5s ease 0s;
+  opacity: 1;
+  position: relative;
+}
+.CTA-box:hover {
+  background-color: #000;
+  color: #fff;
+  opacity: 0.85;
+}
+.CTA-box.box-right {
+  top: 470px;
+  right: 466px;
+}
+.block {
+  opacity: 0;
+  transition: visibility 0.8 linear;
+}
+.fadeIn {
+  opacity: 1;
+}
+//
+// @-webkit-keyframes animat_show {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
+
+/* ANIMATED LINES */
+
+.borderless {
+  border: 0!important;
+}
+
+.top-line, .right-line, .left-line, .bottom-line, .line-fill {
+  position: absolute;
+}
+
+.top-line, .right-line, .left-line, .bottom-line {
+  background-color: #000;
+}
+
+.top-line {
+  width: 100%;
+  height: 4px;
+  top: 0;
+  left: 0;
+  //transition: background 0.4s ease,width 0.4s ease-out;
+  .line-fill {
+    background-color: red;
+    width: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: width 0.4s ease-out;
+  }
+
+
+}
+
+.right-line {
+  width: 4px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  //transition: background 0.4s ease,height 0.4s ease-out 0.4s;
+  .line-fill {
+    background-color: red;
+    height: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: height 0.4s ease-out 0.4s;
+  }
+}
+
+.bottom-line {
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  right: 0;
+  .line-fill {
+    background-color: red;
+    width: 0;
+    right: 0;
+    top: 0;
+    height:100%;
+    transition: width 0.4s ease-out 0.8s;
+  }
+}
+
+.left-line {
+  height: 100%;
+  width: 4px;
+  bottom: 0;
+  left: 0;
+  .line-fill {
+    background-color: red;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    transition: height 0.4s ease-out 1.2s;
+  }
+}
+
+.CTA-box:hover .bottom-line .line-fill,
+.CTA-box:hover .top-line .line-fill {
+  width: 100%;
+}
+
+.CTA-box:hover .right-line .line-fill,
+.CTA-box:hover .left-line .line-fill {
+  height: 100%;
 }
