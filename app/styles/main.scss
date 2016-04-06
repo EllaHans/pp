@@ -1,5 +1,6 @@
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"; // endbower
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
 body {
   min-height: 2000px;
   padding-top: 70px;
@@ -8,6 +9,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* MAIN HEADER */
 .logo-wrapper {
   text-align: center;
 }
@@ -61,18 +64,25 @@ img {
 .navbar .nav-main {
   margin-left: 290px;
 }
-div .homepage {
-  margin-top: 77px;
+.homepage {
+  // margin-top: 77px;
   position: relative;
 }
-div .image-left {
+.image-right,
+.image-left {
   display: block;
   margin-top: 77px;
 }
-div .image-right {
-  display: block;
+.image-right {
   text-align: right;
-  margin-top: 77px;
+}
+
+.CTA-box {
+  background: transparent;
+  color: #000;
+  transition: all 0.5s ease 0s;
+  opacity: 1;
+  position: relative;
 }
 .homepage .CTA-box {
   position: absolute;
@@ -98,13 +108,7 @@ div .image-right {
   font-family: 'Poiret One';
   font-size: 15px;
 }
-.CTA-box {
-  background: transparent;
-  color: #000;
-  transition: all 0.5s ease 0s;
-  opacity: 1;
-  position: relative;
-}
+
 .CTA-box:hover {
   background-color: #000;
   color: #fff;
@@ -116,7 +120,7 @@ div .image-right {
 }
 .block {
   opacity: 0;
-  transition: visibility 0.8 linear;
+  transition: opacity 0.8s linear;
 }
 .fadeIn {
   opacity: 1;

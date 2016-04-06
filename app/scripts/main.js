@@ -1,3 +1,5 @@
+/*global $:true*/
+'use strict';
 $(function(){
   $(window).on('scroll.sticky', function(){
     console.log('triggered', $(window).scrollTop(), this);

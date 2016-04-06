@@ -2,8 +2,9 @@
   "name": "pp",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "parallax.js": "^1.4.2",
+    "bootstrap-sass": "^3.3.6"
   },
   "overrides": {
     "bootstrap-sass": {
