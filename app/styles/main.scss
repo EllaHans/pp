@@ -3,7 +3,7 @@
 // endbower
 body {
   min-height: 2000px;
-  padding-top: 70px;
+  padding-top: 90px;
 }
 img {
   max-width: 100%;
@@ -11,12 +11,17 @@ img {
 }
 
 /* MAIN HEADER */
+/* TOP ROW W/ LOGO IN IT */
 .logo-wrapper {
-  text-align: center;
+  // text-align: center;
 }
 .navbar-default {
   background: rgba(255,255,255,0.9);
   border-color: #000;
+}
+
+.navbar-header {
+  float: none;
 }
 // #header .logo-wrapper a.logo {
 //   display: block;
@@ -37,36 +42,71 @@ img {
 .navbar-brand {
   display: block;
   background: transparent url("./../images/Signature_black.jpg") no-repeat center;
-  background-size: 129px 87px;
+  background-size: contain;
   // width: 122px;
   // height: 73px;
   width: 33%;
-  height: 73px;
-  margin-top: 10px;
+  min-height: 73px;
+  margin: 10px auto;
   float: none;
+  background-size: contain;
+  transition: all 0.3s linear;
+  outline: 1px solid orange;
+  display: inline-block;
 }
 .hovering .navbar-brand {
-  background-size: 80%;
+  background-size: 30%;
+// transform: scale(0.8);
 }
-.navbar .nav li a {
-  display: inline-block;
-  font-family: 'Poiret One';
-  font-size: 25px;
-  margin: 0 30px;
-  color: #000;
-  font-weight: bold;
+
+/* MENUS ROW */
+.navbar-menus-wrapper {
+  text-align: center;
+  margin: 0;
+  // Generic rules for menu items
+  .nav {
+    a {
+      display: inline-block;
+      font-family: 'Poiret One';
+      font-size: 25px;
+      // margin: 0 30px;
+      color: #000;
+      font-weight: bold;
+      padding: 15px 30px;
+    }
+  }
+
+  /* MAIN MENU */
+  .nav-main {
+    margin: 0 auto;
+    float: none;
+    display: inline-block;
+  }
+
+  /* USER MENU */
+  .user-menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    a {
+      font-size: 15px;
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+
+  @media (max-width: 767px){
+    .user-menu{
+      position: static;
+    }
+  }
+
 }
-.navbar .navbar-right li a {
-  font-size: 15px;
-  margin: 1px;
-  font-weight: bold;
-}
-.navbar .nav-main {
-  margin-left: 290px;
-}
+
+/* HOMEPAGE STYLES */
 .homepage {
-  // margin-top: 77px;
   position: relative;
+  display: none;
 }
 .image-right,
 .image-left {
